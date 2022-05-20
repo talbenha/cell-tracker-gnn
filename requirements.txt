@@ -25,3 +25,10 @@ imagecodecs
 imageio
 seaborn
 Pillow
+
+# --------- for segmentation algorithm --------- #
+# --------- tensorflow for seg --------- #
+tensorflow-gpu==2.4.1
+# --------- others (seg) --------- #
+scikit-fmm
+
