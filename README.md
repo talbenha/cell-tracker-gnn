@@ -7,7 +7,7 @@
 <a href="https://hydra.cc/"><img alt="Config: Hydra" src="https://img.shields.io/badge/Config-Hydra-89b8cd"></a>
 
 
-  ECCV 2022 Submission #5297. CONFIDENTIAL COPY. DO NOT DISTRIBUTE
+  CONFIDENTIAL REPOSITORY. DO NOT DISTRIBUTE
 </div>
 
 </div>
@@ -76,9 +76,6 @@ We use older version of the publicly available deep learning template provided i
 │   │   │   └── pdn_conv.py                               <- PDN-Conv implementation
 │   │   └── celltrack_plmodel.py                <- Lightning model implementing training routine
 │   ├── utils                   <- Utility scripts 
-│   │   ├── C2C12                               <- Utils function to handle with C2C12 dataset
-│   │   │   ├── prepareGTmarkers.py                        <- handle with C2C12 GT and prepare markers for our training pipeline
-│   │   │   └── xml2txt_py.py                              <- handle with C2C12 GT -parser from xml files to txt files
 │   │   └── utils.py                            <- Utils features 
 │   │
 │   └── train.py                                <- Training pipeline
@@ -145,21 +142,6 @@ We use older version of the publicly available deep learning template provided i
 │   │   │   │   ├── 02                                    <- Seuqence 02
 │   │   │   .
 │   │   │   .
-│   │   │   .       
-│   ├── C2C12                 <- C2C12 Dataset
-│   │   ├── control                             <- control growth factor
-│   │   │   │   ├── exp1_F0001                            <- Seuqence 01
-│   │   │   │   ├── exp1_F0001_GT                         <- Seuqence 01 GT
-│   │   │   │   ├── exp1_F0002                            <- Seuqence 02
-│   │   │   │   ├── exp1_F0002_GT                         <- Seuqence 02 GT
-│   │   │   .
-│   │   │   .
-│   │   ├── FGF2                                <- FGF2 growth factor
-│   │   │   │   ├── exp1_F0005                            <- Seuqence 05
-│   │   │   │   ├── exp1_F0005_GT                         <- Seuqence 05 GT
-│   │   │   │   ├── exp1_F0006                            <- Seuqence 06
-│   │   │   │   ├── exp1_F0006_GT                         <- Seuqence 06 GT
-│   │   │   .
 │   │   │   .
 ```
 </details>
@@ -187,7 +169,6 @@ pip install -r requirements.txt
 </details>
 
 ## Download Datasets
-- **C2C12 dataset**: https://osf.io/ysaq2/
 - **Cell tracking challenge 2D datasets**: http://celltrackingchallenge.net/2d-datasets/
 - **Cell tracking challenge 3D datasets**: http://celltrackingchallenge.net/3d-datasets/
 
@@ -426,12 +407,3 @@ rm -r "${DATASET}/${SEQUENCE}_CSV" "${DATASET}/${SEQUENCE}_RES_inference" "${DAT
 You should create the same script as above with the relevant parameters to trained models (which are elaborated above how to produce), In comments, we explain each variable. Please refer to the main paper and read about the segmentation algorithms used. 
 Please refer to read about evaluation-methodology of the challenge here http://celltrackingchallenge.net/evaluation-methodology/ - it is also provided with the Command-line software packages that implement the TRA measure (publicly available in the link)
   
-  
-## C2C12 Data Handling 
-The provided C2C12 GT requires to be transformed to the cell tracking challenge format. For this purpose, we provide files for GT data handling located in the ```/src/utils/C2C12``` folder:
-1. ```xml2txt_py.py``` - parsing of the XML files provided with the datasets to txt files.
-  Insert path for the folder containing the XML GT files for the ```xml_folder``` variable in the main function.
-2. ```prepareGTmarkers.py``` - read the txt files, along with the images, and save the markers annotation images in the CTC formats.
-  Insert the path to the converted txt GT file and the corresponding images folder for the specific sequence and illustrate in the dictionary in the ```txt_annotations()``` function.
-
-Those files would help you to convert the GT to the required format for our training files explained above.
