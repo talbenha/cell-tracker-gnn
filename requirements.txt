@@ -10,6 +10,13 @@ hydra-colorlog==1.0.0
 hydra-optuna-sweeper==0.9.0rc2
 # --------- loggers --------- #
 wandb>=0.10.20
+
+# --------- for segmentation algorithm --------- #
+# --------- tensorflow for seg --------- #
+tensorflow-gpu
+# --------- others (seg) --------- #
+scikit-fmm==2021.2.2
+
 # --------- others --------- #
 opencv-python
 rich
@@ -26,9 +33,4 @@ imageio
 seaborn
 Pillow
 
-# --------- for segmentation algorithm --------- #
-# --------- tensorflow for seg --------- #
-tensorflow-gpu
-# --------- others (seg) --------- #
-scikit-fmm==2021.2.2
 
