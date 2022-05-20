@@ -13,12 +13,12 @@ wandb>=0.10.20
 
 # --------- for segmentation algorithm --------- #
 # --------- tensorflow for seg --------- #
-tensorflow-gpu
+tensorflow-gpu==2.4.0
 # --------- others (seg) --------- #
 scikit-fmm==2021.2.2
 
 # --------- others --------- #
-opencv-python
+opencv-python==4.5.1.48
 rich
 python-dotenv
 pre-commit
@@ -32,5 +32,6 @@ imagecodecs
 imageio
 seaborn
 Pillow
+
 
 
