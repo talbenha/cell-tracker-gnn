@@ -1,0 +1,15 @@
+_target_: src_metric_learning.Data.dataset_2D
+kwargs:
+  pad_value: 0
+  norm_value: 0
+  normalize_type: 'MinMaxCell'
+  train_val_test_split: [80, 20, 0]
+
+  data_dir_img: #Please/insert/path/to/images_directory
+  data_dir_mask: #Please/insert/path/to/segmentation_mask/corresponds/images
+  subdir_mask: 'GT/TRA'
+  dir_csv: #Please/insert/path/to/saved_basic_CSV
+
+  curr_seq: 1
+  num_sequences: 2
+  deviation: 'no_overlap'

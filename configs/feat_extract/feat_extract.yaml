@@ -1,0 +1,5 @@
+defaults:
+    - params: params.yaml # do not change
+_target_: src.datamodules.extract_features.preprocess_seq2graph_2d
+# options - preprocess_seq2graph_2d/preprocess_seq2graph_3D/preprocess_seq2graph_patch_based
+

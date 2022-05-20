@@ -1,0 +1,8 @@
+input_images: #Please/insert/path/to/image_frames
+input_masks: #Please/insert/path/to/image_masks/corresponds/image_frames
+input_seg:  #Please/insert/path/to/segmentation_mask/corresponds/image_frames
+input_model: #Please/insert/path/of/metric_learning/feature_extractor_model
+output_csv: #Please/insert/path/to/save/features
+basic: #  -options True/False
+sequences: ['01', '02']
+seg_dir: # options '_GT/SEG'/'_ST/SEG'

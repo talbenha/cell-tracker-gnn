@@ -1,0 +1,57 @@
+_target_: src.models.celltrack_plmodel.CellTrackLitModel
+
+one_hot_label: ${one_hot}
+loss_weights: 65
+sample: False
+weight_loss: True
+directed: True
+separate_models: ${separate_models}
+
+optim_module:
+  target: Adam
+  kwargs:
+    lr: 0.001
+    weight_decay: 0.00001
+
+lr_sch_module:
+  target: #ReduceLROnPlateau
+  monitor: "val/acc"
+  kwargs:
+    verbose: True
+    mode: 'min'
+
+model_params:
+  target: CellTrack_Model
+  kwargs:
+    hand_NodeEncoder_dic:
+      input_dim: 6
+      fc_dims: [64, 16]
+
+    learned_NodeEncoder_dic:
+      input_dim: 128
+      fc_dims: [ 64, 16 ]
+
+    intialize_EdgeEncoder_dic:
+      input_dim: 232
+      fc_dims: [ 128, 64 ]
+
+    message_passing:
+      target: CellTrack_GNN
+      kwargs:
+        # node message passing
+        in_channels: 32 #pdn
+        hidden_channels: 32 #pdn
+        #edge_attention
+        in_edge_channels: 64
+        hidden_edge_channels_conv: 16
+        # edge message passing
+        hidden_edge_channels_linear: [128, 64]
+        dropout: 0.0
+        num_layers: 6
+        num_nodes_features: 3
+
+    edge_classifier_dic:
+      input_dim: 64
+      fc_dims: [128, 32, 1]
+      dropout_p: 0.2
+      use_batchnorm: False

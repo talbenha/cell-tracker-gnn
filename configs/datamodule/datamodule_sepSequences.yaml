@@ -1,0 +1,46 @@
+_target_: src.datamodules.celltrack_datamodule.CellTrackDataModule
+
+data_dir: ${data_dir}  # data_dir is specified in config.yaml
+batch_size: 8
+num_workers: 0
+pin_memory: False
+
+dataset_params:
+  num_frames: 10
+  type_file: 'csv'
+  produce_gt: 'simple'
+  main_path:  #Please/insert/path/to/CSVs/contain/features
+  dirs_path:
+    train: # please/insert/*below*/the/sub/directory(from_home_dir)/where/CSVs/are/located
+      - "02"
+    valid:
+      - "01"
+    test:
+      - "01"
+  one_hot_label: ${one_hot}
+  exp_name: #Please/insert/experiment/name
+  overlap: 1
+  jump_frames: 1
+  mul_vals: [2, 2, 2]
+  filter_edges: True
+  directed: True
+  edge_feat_embed_dict:
+    p: 1
+    use_normalized_x: True
+    normalized_features: False
+
+  separate_models: ${separate_models}
+  normalize_all_cols: False
+
+  same_frame: False # must be false
+  next_frame: True
+
+  self_loop: True
+  normalize: True
+  debug_visualization: False
+  which_preprocess: 'MinMax'
+  drop_feat: [
+      "min_row_bb", "min_col_bb",
+      "max_row_bb", "max_col_bb",
+  ]
+

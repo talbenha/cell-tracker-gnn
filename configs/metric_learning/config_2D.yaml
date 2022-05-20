@@ -1,0 +1,33 @@
+defaults:
+    - dataset: dataset_2D.yaml # dataset_2D.yaml or dataset_2D_patch_based.yaml
+
+exp_name: '2D_MultiSimilarityLoss'
+
+kwargs:
+  model_name: 'resnet18'
+  embedding_dim: 128
+  normalized_feat: True
+
+  dataset_dict_keys: ['val']
+  batch_size: 32
+  num_epochs: 1000
+  num_workers: 16
+
+  lr_trunk: 0.00001
+  lr_embedder: 0.0001
+  weight_decay: 0.0001
+
+  loss_function: 'MultiSimilarityLoss'
+  loss_distance: 'CosineSimilarity'
+  loss_margin: 0.25
+  loss_gamma: 128
+  epsilon_miner: 0.1
+
+  shorter: True
+
+  avg_of_avgs: True
+  k: "max_bin_count"
+  m_samples: 4
+  test_interval: 1
+  patience: 50
+
