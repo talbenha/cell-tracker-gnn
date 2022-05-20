@@ -30,5 +30,5 @@ Pillow
 # --------- tensorflow for seg --------- #
 tensorflow-gpu==2.4.1
 # --------- others (seg) --------- #
-scikit-fmm
+scikit-fmm==2021.2.2
 
