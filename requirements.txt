@@ -28,7 +28,7 @@ Pillow
 
 # --------- for segmentation algorithm --------- #
 # --------- tensorflow for seg --------- #
-tensorflow-gpu==2.4.1
+tensorflow-gpu
 # --------- others (seg) --------- #
 scikit-fmm==2021.2.2
 
