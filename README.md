@@ -157,11 +157,11 @@ we provide conda envrioment setup dependencies - if you are not familiar with co
   
 ```yaml
 # Enter to the code folder
-cd GNN_CT
+cd cell-tracker-gnn
 
 # create conda environment python=3.8 pytorch==1.8.0 torchvision==0.9.0 cudatoolkit=11.1 faiss-gpu pytorch-lightning==1.4.9
-conda create --name gnnct --file requirements-conda.txt
-conda activate gnnct
+conda create --name cell-tracking-challenge --file requirements-conda.txt
+conda activate cell-tracking-challenge
 
 # install other requirements
 pip install -r requirements.txt
