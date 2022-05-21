@@ -1,9 +1,5 @@
 # Requirements python==3.8
 
-# --------- pytorch-metric-learning --------- #
-pytorch-metric-learning
-record-keeper
-tensorboard
 # --------- hydra --------- #
 hydra-core==1.1.0.dev5
 hydra-colorlog==1.0.0
@@ -12,26 +8,6 @@ hydra-optuna-sweeper==0.9.0rc2
 wandb>=0.10.20
 
 # --------- others --------- #
-opencv-python
-rich
-python-dotenv
-pre-commit
-scikit-learn
-scikit-image
-pandas
-matplotlib
-pudb
-pytest
-imagecodecs
-imageio
-seaborn
-Pillow
-
-
-# --------- for segmentation algorithm --------- #
-# --------- tensorflow for seg --------- #
-# tensorflow-gpu
-# --------- others (seg) --------- #
 # scikit-fmm==2021.2.2
 
 
