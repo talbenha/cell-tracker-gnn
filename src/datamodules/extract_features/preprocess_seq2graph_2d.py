@@ -35,9 +35,9 @@ class TestDataset(Dataset):
         dir_masks = path_masks
         dir_results = path_result
 
-        assert os.path.exists(dir_img), "Image paths is not exist, please fix it!"
-        assert os.path.exists(dir_masks), "Masks paths is not exist, please fix it!"
-        assert os.path.exists(dir_results), "Result paths is not exist, please fix it!"
+        assert os.path.exists(dir_img), f"Image paths ({dir_img}) is not exist, please fix it!"
+        assert os.path.exists(dir_masks), f"Masks paths ({dir_masks}) is not exist, please fix it!"
+        assert os.path.exists(dir_results), f"Result paths ({dir_results}) is not exist, please fix it!"
         self.images = []
         if os.path.exists(dir_img):
             self.images = [os.path.join(dir_img, fname) for fname in sorted(os.listdir(dir_img))
