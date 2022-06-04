@@ -150,7 +150,7 @@ def train(device,
     end_of_epoch_hook = hooks.end_of_epoch_hook(tester,
                                                 dataset_dict,
                                                 model_folder,
-                                                test_interval=test_interval,
+#                                                 test_interval=test_interval,
                                                 patience=patience)
 
     trainer = trainers.MetricLossOnly(models,
