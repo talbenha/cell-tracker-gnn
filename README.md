@@ -23,12 +23,12 @@ Official Implementation: **Graph Neural Network for Cell Tracking in Microscopy 
 
 [PyTorch Lightning](https://github.com/PyTorchLightning/pytorch-lightning) is a lightweight PyTorch wrapper for high-performance AI research.
 
-[Hydra](https://github.com/facebookresearch/hydra) is an open-source Python framework that simplifies the development of research and other complex applications. 
+[Hydra](https://github.com/facebookresearch/hydra) is an open-source Python framework that simplifies the development of research and other complex applications.
 
 > If you are not familiar with [PyTorch](https://pytorch.org), [PyTorch Lightning](https://www.pytorchlightning.ai) and [Hydra](https://hydra.cc). We highly recommend to read about them before starting.
-> 
-We use older version of the publicly available deep learning template provided in <a href="https://github.com/hobogalaxy/lightning-hydra-template"><img alt="Template" src="https://img.shields.io/badge/-Lightning--Hydra--Template-017F2F?style=flat&logo=github&labelColor=gray"></a> 
-  
+>
+We use older version of the publicly available deep learning template provided in <a href="https://github.com/hobogalaxy/lightning-hydra-template"><img alt="Template" src="https://img.shields.io/badge/-Lightning--Hydra--Template-017F2F?style=flat&logo=github&labelColor=gray"></a>
+
 </details>
 <br>
 
@@ -75,22 +75,22 @@ We use older version of the publicly available deep learning template provided i
 │   │   │   ├── mlp.py                                    <- multilayer perceptron implementation
 │   │   │   └── pdn_conv.py                               <- PDN-Conv implementation
 │   │   └── celltrack_plmodel.py                <- Lightning model implementing training routine
-│   ├── utils                   <- Utility scripts 
-│   │   └── utils.py                            <- Utils features 
+│   ├── utils                   <- Utility scripts
+│   │   └── utils.py                            <- Utils features
 │   │
 │   └── train.py                                <- Training pipeline
 │
 ├── src_metric_learning
 │   ├── Data               <- Data modules - datasets and sampler
-│   │   ├── dataset_2D.py       <- Implemetation of 2D dataset 
-│   │   ├── dataset_3D.py       <- Implemetation of 3D dataset 
+│   │   ├── dataset_2D.py       <- Implemetation of 2D dataset
+│   │   ├── dataset_3D.py       <- Implemetation of 3D dataset
 │   │   └── sampler.py          <- Implemetation of sampler used for batch construction
 │   ├── modules                 <- Pytorch models
-│   │   ├── resnet_2d           <- Implemetation of ResNet for 2D dataset 
+│   │   ├── resnet_2d           <- Implemetation of ResNet for 2D dataset
 │   │   │   ├── resnet.py             <- Final models
 │   │   │   └── utils_resnet.py       <- Multiple ResNet blocks and models Implemetation
-│   │   ├── resnet_3d           <- Implemetation of ResNet for 3D dataset 
-│   │   │   ├── resnet.py             <- Final models 
+│   │   ├── resnet_3d           <- Implemetation of ResNet for 3D dataset
+│   │   │   ├── resnet.py             <- Final models
 │   └── └── └── utils_resnet.py       <- Multiple ResNet blocks and models Implemetation
 │
 ├── LICENSE                 <-ECCV 2022 Submission #5297. CONFIDENTIAL REVIEW COPY. DO NOT DISTRIBUTE
@@ -114,27 +114,27 @@ We use older version of the publicly available deep learning template provided i
 ├── data                    <- Project data
 │   ├── CTC                 <- Cell tracking challenge data
 │   │   ├── Training                             <- Training Split
-│   │   │   ├── Fluo-N2DH-SIM+                        <- Fluo-N2DH-SIM+ Dataset 
+│   │   │   ├── Fluo-N2DH-SIM+                        <- Fluo-N2DH-SIM+ Dataset
 │   │   │   │   ├── 01                                    <- Seuqence 01
 │   │   │   │   ├── 01_GT                                 <- Seuqence 01 GT
 │   │   │   │   │   ├── TRA                                   <- Tracking GT
-│   │   │   │   │   └── SEG                                   <- Tracking SEG (Not used)      
+│   │   │   │   │   └── SEG                                   <- Tracking SEG (Not used)
 │   │   │   │   ├── 02                                    <- Seuqence 02
 │   │   │   │   ├── 02_GT                                 <- Seuqence 02 GT
 │   │   │   │   │   ├── TRA                                   <- Tracking GT
-│   │   │   │   │   └── SEG                                   <- Tracking SEG (Not used)   
+│   │   │   │   │   └── SEG                                   <- Tracking SEG (Not used)
 │   │   │   ├── PhC-C2DH-U373                             <- PhC-C2DH-U373 Dataset
 │   │   │   │   ├── 01                                    <- Seuqence 01
 │   │   │   │   ├── 01_GT                                 <- Seuqence 01 GT
 │   │   │   │   │   ├── TRA                                   <- Tracking GT
-│   │   │   │   │   └── SEG                                   <- Tracking SEG (Not used) 
+│   │   │   │   │   └── SEG                                   <- Tracking SEG (Not used)
 │   │   │   │   ├── 01_ST                                 <- Seuqence 01 Silver GT
 │   │   │   │   └── └── SEG                                   <- Tracking SEG
 │   │   │   .
 │   │   │   .
 │   │   │   .
 │   │   ├── Test                             <- Graph Dataset implementation
-│   │   │   ├── Fluo-N2DH-SIM+                        <- Fluo-N2DH-SIM+ Dataset 
+│   │   │   ├── Fluo-N2DH-SIM+                        <- Fluo-N2DH-SIM+ Dataset
 │   │   │   │   ├── 01                                    <- Seuqence 01
 │   │   │   │   ├── 02                                    <- Seuqence 02
 │   │   │   ├── PhC-C2DH-U373                             <- PhC-C2DH-U373 Dataset
@@ -151,10 +151,10 @@ We use older version of the publicly available deep learning template provided i
 ## Set up conda virtual environment
 <details>
 <summary><b>Install dependencies on linux enviroment (click to expand):</b></summary>
-we provide conda envrioment setup dependencies - if you are not familiar with conda, please read about 
- [Managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) before starting 
-  
-  
+we provide conda envrioment setup dependencies - if you are not familiar with conda, please read about
+ [Managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) before starting
+
+
 ```yaml
 # Enter to the code folder
 cd cell-tracker-gnn
@@ -173,55 +173,59 @@ pip install -r requirements.txt
 - **Cell tracking challenge 3D datasets**: http://celltrackingchallenge.net/3d-datasets/
 
 ## Command lines Summary
- 
+ <details>
+
 We summarize all the relevant command lines to produce a run, an explanation for each variable is provided in **Training code** Section below.
 ```yaml
- export CUDA_VISIBLE_DEVICES=0 # select GPU number 
- 
-# run feat_extract for metric learning - 
+ export CUDA_VISIBLE_DEVICES=0 # select GPU number
+
+# run feat_extract for metric learning -
 # please ensure that your target is correct in the 'configs/feat_extract/feat_extract.yaml' file.
 python run_feat_extract.py params.input_images=<image_dir> params.input_masks=<masks_dir> params.input_seg=<masks_dir> params.output_csv=<save_output> params.basic=True params.sequences=[<str_sequences>, <str_sequences>, ...] params.seg_dir=<seg_dir_template>
 
 # run metric learning training -
 python run_train_metric_learning.py dataset.kwargs.data_dir_img=<image_directory> dataset.kwargs.data_dir_mask=<data_dir_mask> dataset.kwargs.dir_csv=<dir_csv>
-# output 'all_params.pth' is generated at end, it is the input_model for the next comand line 
+# output 'all_params.pth' is generated at end, it is the input_model for the next comand line
 
 # run feat_extract for cell tracking training -
 python run_feat_extract.py params.input_images=<image_dir> params.input_masks=<masks_dir> params.input_seg=<masks_dir> params.input_model=<path_to_all_params_produced_in_metric_learning> params.output_csv=<save_output> params.basic=False params.sequences=[<str_sequences>,<str_sequences>,...] params.seg_dir=<seg_dir_template>
 
-# cell tracking training run 
+# cell tracking training run
 python run.py datamodule.dataset_params.main_path=<csv_home_directory> datamodule.dataset_params.exp_name="<name>_<2D/3D>"
 ```
- 
+
 For example, if your data structure is organized as recommended, you can run training for Fluo-N2DH-SIM+ dataset with the following command lines:
 ```yaml
- export CUDA_VISIBLE_DEVICES=0 # select GPU number 
- 
-# run feat_extract for metric learning - 
+ export CUDA_VISIBLE_DEVICES=0 # select GPU number
+
+# run feat_extract for metric learning -
 python run_feat_extract.py params.input_images="./data/CTC/Training/Fluo-N2DH-SIM+" params.input_masks="./data/CTC/Training/Fluo-N2DH-SIM+" params.input_seg="./data/CTC/Training/Fluo-N2DH-SIM+" params.output_csv="./data/basic_features/" params.sequences=['01','02']  params.seg_dir='_GT/TRA' params.basic=True
 
 # run metric learning training -
 python run_train_metric_learning.py dataset.kwargs.data_dir_img="./data/CTC/Training/Fluo-N2DH-SIM+" dataset.kwargs.data_dir_mask="./data/CTC/Training/Fluo-N2DH-SIM+" dataset.kwargs.dir_csv="./data/basic_features/Fluo-N2DH-SIM+" dataset.kwargs.subdir_mask='GT/TRA'
-# output 'all_params.pth' is generated at end, it is the input_model for the next comand line 
+# output 'all_params.pth' is generated at end, it is the input_model for the next comand line
 
 # run feat_extract for cell tracking training -
 python run_feat_extract.py params.input_images="./data/CTC/Training/Fluo-N2DH-SIM+" params.input_masks="./data/CTC/Training/Fluo-N2DH-SIM+" params.input_seg="./data/CTC/Training/Fluo-N2DH-SIM+" params.output_csv="./data/ct_features/" params.sequences=['01','02']  params.seg_dir='_GT/TRA' params.basic=False params.input_model=<path_to_all_params_produced_in_metric_learning>
 
-# cell tracking training run 
+# cell tracking training run
 python run.py datamodule.dataset_params.main_path="./data/ct_features/Fluo-N2DH-SIM+" datamodule.dataset_params.exp_name="2D_SIM" datamodule.dataset_params.drop_feat=[]
 ```
+</details>
 
-## Main Project Overview
-  
+## Overview
+<details>
 Our code consists of 3 run files located on the 'home' directory of the project -```run.py```, ```run_feat_extract.py```, and ```run_train_metric_learning.py```- dividing our project into 3 parts namely 'complete model', 'feature extraction', and 'metric learning', respectively. An overview of each is provided in the next few sentences:
-- **Metric Learning**: is responsible for training a model for extracting features using the Pytorch Metric Learning library and building using a separate source code.(see src_metric_learning in  [#Project Structure](#project-structure)). Before running this part, we should generate CSV files consisting of relevant information about the cells, used by the datasets in metric learning training. 
+- **Metric Learning**: is responsible for training a model for extracting features using the Pytorch Metric Learning library and building using a separate source code.(see src_metric_learning in  [#Project Structure](#project-structure)). Before running this part, we should generate CSV files consisting of relevant information about the cells, used by the datasets in metric learning training.
 - **Feature Extraction**: After training a discriminative model to extract features, we are extracting features used later to build our graphs.
 - **Complete Model**: When all the required data is ready, we can use it to train a graph neural network model as presented in the main paper.
 <br>
+</details>
 
 ## Training code
-We provide details on how to run any aspect of our code, from metric learning to our full model performing cell tracking, and extracting features in between. 
-  
+<details>
+We provide details on how to run any aspect of our code, from metric learning to our full model performing cell tracking, and extracting features in between.
+
 ### Run Metric Learning
 1. Before running training, we should generate CSV files consisting of relevant information about the cells, we do so using ```run_feat_extract.py``` file and the corresponding configuration file located in ```configs/feat_extract/feat_extract.yaml```:
 ```yaml
@@ -230,7 +234,7 @@ defaults:
 _target_: src.datamodules.extract_features.<choose_seq2graph_file> # options - preprocess_seq2graph_2d/preprocess_seq2graph_3D/preprocess_seq2graph_patch_based
 ```
 Where the params ```configs/feat_extract/params/params.yaml``` configuration:
-```  
+```
 input_images: #Please/insert/path/to/image_frames
 input_masks: #Please/insert/path/to/image_masks/corresponds/image_frames
 input_seg: #Please/insert/path/to/segmentation_mask/corresponds/image_frames
@@ -240,17 +244,17 @@ basic:  # !! Most important now- should be True !! -options True/False
 sequences: # example: ['01', '02']
 seg_dir: <choose_seg_dir_template> # options '_GT/SEG'/'_ST/SEG'
 ```
-An explanation of each variable is detailed in the comments. 
+An explanation of each variable is detailed in the comments.
 
-In this stage, the 'basic' parameter is the most important one- should be set to True, indicating for basic features used for metric learning. 
-The 'seg_dir' variable is used since in the cell tracking challenge (CTC) the partitions to folders are made in a fixed template. for example for sequence 1 - '01' folder is for images, '01_GT/TRA' folder is for markers annotation, '01_GT/SEG' folder is for segmentation annotation. In the case of silver ground truth segmentation, the folder is '01_ST/SEG'. We are following this assumption to all datasets, even datasets that are not in the CTC. 
-  
-After setting all paths, we can run ```run_feat_extract.py``` to extract features and the CSV files will be saved to the folder of 'output_csv' (Please pay attention to the log provided which indicates the place that the files saved). 
+In this stage, the 'basic' parameter is the most important one- should be set to True, indicating for basic features used for metric learning.
+The 'seg_dir' variable is used since in the cell tracking challenge (CTC) the partitions to folders are made in a fixed template. for example for sequence 1 - '01' folder is for images, '01_GT/TRA' folder is for markers annotation, '01_GT/SEG' folder is for segmentation annotation. In the case of silver ground truth segmentation, the folder is '01_ST/SEG'. We are following this assumption to all datasets, even datasets that are not in the CTC.
+
+After setting all paths, we can run ```run_feat_extract.py``` to extract features and the CSV files will be saved to the folder of 'output_csv' (Please pay attention to the log provided which indicates the place that the files saved).
 
 Now, you are familiar with all the relevant variables, we are providing a command line to produce the corresponding run with an override of the discussed variables.
 
 ```yaml
-# run feat_extract for metric learning - 
+# run feat_extract for metric learning -
 # please ensure that your target is correct in the 'configs/feat_extract/feat_extract.yaml' file.
 python run_feat_extract.py params.input_images=<image_dir> params.input_masks=<masks_dir> params.input_seg=<masks_dir> params.output_csv=<save_output> params.basic=True params.sequences=[<str_sequences>, <str_sequences>, ...] params.seg_dir=<seg_dir_template>
 ```
@@ -276,7 +280,7 @@ python run_train_metric_learning.py dataset.kwargs.data_dir_img=<image_directory
     ```
 3. Now, you've set everything up and you're ready to run ```run_train_metric_learning.py```.
 At the end of the run, our code prepares wraps the best checkpoints and saves them with metadata in a dictionary file called "/outputs/<date_time>/<time>/all_params.pth" in the project directory. This dictionary is required for learned features extraction back in ```configs/feat_extract/params/params.yaml```:
-```  
+```
 input_images: #Please/insert/path/to/image_frames
 input_masks: #Please/insert/path/to/image_masks/corresponds/image_frames
 input_seg: #Please/insert/path/to/segmentation_mask/corresponds/image_frames
@@ -286,13 +290,13 @@ basic:  # !! Most important now- should be True !! -options True/False
 sequences: # example: ['01', '02']
 seg_dir: <choose_seg_dir_template> # options '_GT/SEG'/'_ST/SEG'
 ```
- 
+
 The 'basic' variable should be set to 'False' and the input_model is the save dictionary ('all_params') file logged at the end of the training of the metric learning. You should now run again ```run_feat_extract.py``` to extract features - both spatio-temporal and deep metric learning features.
-  
-  
+
+
 A command line to produce the corresponding run with an override of the discussed variables is provided:
 ```yaml
-# run feat_extract for cell tracking  - 
+# run feat_extract for cell tracking  -
 # please ensure that your target is correct in the 'configs/feat_extract/feat_extract.yaml' file.
 python run_feat_extract.py params.input_images=<image_dir> params.input_masks=<masks_dir> params.input_seg=<masks_dir> params.input_model=<path_to_all_params_produced_in_metric_learning> params.output_csv=<save_output> params.basic=False params.sequences=[<str_sequences>, <str_sequences>, ...] params.seg_dir=<seg_dir_template>
 ```
@@ -311,13 +315,13 @@ defaults:
 as mentioned in the comments, you can change the model and the datamodule configurations only, which are located in ```configs/model``` and  ```configs/datamodule``` folders, respectively.
 **model** is provided with 3 main option - ```celltrack_model_2d.yaml```, ```celltrack_model_3d.yaml```, and ```celltrack_model_patch_based.yaml``` indicate for 2D  dataset with segmentation, 3D  dataset with segmentation, and 2d  dataset with markers, respectively. The only differnece between each is the input features dimension.
 
-**datamodule** is provided with 2 main option - 
+**datamodule** is provided with 2 main option -
   1. Run with separted sequences for train/validation/test using ```datamodule_sepSequences.yaml```
   2. Run with combination of sequences for train/validation/test using ```datamodule_multiSequence.yaml```- this configuration is used to train the final model to CTC (with 2 combination of the provided sequences to train and validation).<br>
-  
+
 In each setting, you should change the directory in the variable "main_path" and 'dirs_path' sub-dirs of the main path. In case that you don't want to run with patch base settings (marker annotation settings) and you do want to run with segmentation annotation settings, please comment the strings in "drop_feat" argument, or simply override them with adding ```datamodule.dataset_params.drop_feat=[]``` to the run command line.
 
-**model** is provided with 3 main options -  
+**model** is provided with 3 main options -
   1. Run with 2d+segmentation ```celltrack_model_2d.yaml```
   2. Run with 2d+markers ```celltrack_model_patch_based.yaml```
   3. Run with 3d+segmentation ```celltrack_model_3d.yaml```<br>
@@ -327,24 +331,25 @@ In these configurations, no changes are requested. Just setting the preference s
 Now, when you are familiar with all the relevant variables, we are providing a command line to produce the corresponding run with an override of the discussed variables.
 ```yaml
 export CUDA_VISIBLE_DEVICES=0 # select GPU number
-# training run 
+# training run
 python run.py datamodule.dataset_params.main_path=<csv_home_directory> datamodule.dataset_params.exp_name="<name>_<2D/3D>"
 ```
-  
-At the end of the training, a run is made to extract the validation set scores on the edges of the graph for the best checkpoint. Messages with the performance and the best checkpoint path are logged. The achieved precision, recall, and accuracy scores by our method on the edge classification are approximate ~99% (and even higher), and the scores are logged at this stage along with other information.
-  
- 
-Summary of all required command lines is provided in Section **Command lines Summary** above.
 
+At the end of the training, a run is made to extract the validation set scores on the edges of the graph for the best checkpoint. Messages with the performance and the best checkpoint path are logged. The achieved precision, recall, and accuracy scores by our method on the edge classification are approximate ~99% (and even higher), and the scores are logged at this stage along with other information.
+
+
+Summary of all required command lines is provided in Section **Command lines Summary** above.
+</details>
 
 ### Logs Formats
+<details>
 Hydra creates a new working directory for every executed training run (metric_learning/cell_tracking). <br>
 By default, logs have the following structure separated for two main directories logs/outputs correspond to cell_tracking/metric_learning, respectively:
 
 ```
 │
 ├── logs                  # Logs generated by Hydra and PyTorch Lightning loggers in the cell tracking model training
-│   ├── runs                    # Folder for logs generated from single runs of the full model 
+│   ├── runs                    # Folder for logs generated from single runs of the full model
 │   │   ├── 2021-02-15              # Date of executing run
 │   │   │   ├── 16-50-49                # Hour of executing run
 │   │   │   │   ├── .hydra                  # Hydra logs
@@ -370,9 +375,10 @@ By default, logs have the following structure separated for two main directories
 │
 ```
 <br><br>
-    
-  
+</details>
+
 ## Evaluation code
+<details>
 To run evaluation, we provide an example script (submitted to CTC) and all the relevant files to run our code in ```src/inference``` folder, details below:
 ```
 SEQUENCE="01"
@@ -384,7 +390,7 @@ MODEL_PYTORCH_LIGHTNING="${PWD}/parameters/Tracking_Models/Fluo-N2DH-SIM+/checkp
 CODE_SEG="${PWD}/seg_code/" # path/to/seg/algorithm
 SEG_MODEL="${PWD}/parameters/Seg_Models/Fluo-N2DH-SIM+/" # path/to/seg_model/parameters
 MODALITY="2D"  # dataset modality
-        
+
 # seg prediction
 python ${CODE_SEG}/Inference2D.py --gpu_id 0 --model_path ${SEG_MODEL} --sequence_path "${DATASET}/${SEQUENCE}" --output_path "${DATASET}/${SEQUENCE}_SEG_RES" --edge_dist 3 --edge_thresh=0.3 --min_cell_size 100 --max_cell_size 1000000 --fov 0 --centers_sigmoid_threshold 0.8 --min_center_size 10 --pre_sequence_frames 4 --data_format NCHW --save_intermediate --save_intermediate_path ${DATASET}/${SEQUENCE}_SEG_intermediate
 
@@ -404,6 +410,7 @@ python ${CODE_TRA}/postprocess_clean.py -modality "${MODALITY}" -iseg "${DATASET
 
 rm -r "${DATASET}/${SEQUENCE}_CSV" "${DATASET}/${SEQUENCE}_RES_inference" "${DATASET}/${SEQUENCE}_SEG_RES"
 ```
-You should create the same script as above with the relevant parameters to trained models (which are elaborated above how to produce), In comments, we explain each variable. Please refer to the main paper and read about the segmentation algorithms used. 
+You should create the same script as above with the relevant parameters to trained models (which are elaborated above how to produce), In comments, we explain each variable. Please refer to the main paper and read about the segmentation algorithms used.
 Please refer to read about evaluation-methodology of the challenge here http://celltrackingchallenge.net/evaluation-methodology/ - it is also provided with the Command-line software packages that implement the TRA measure (publicly available in the link)
-  
+
+</details>
