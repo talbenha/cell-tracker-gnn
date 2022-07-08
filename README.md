@@ -424,9 +424,11 @@ You should create the same script as above with the relevant parameters to train
 Please refer to read about evaluation-methodology of the challenge here http://celltrackingchallenge.net/evaluation-methodology/ - it is also provided with the Command-line software packages that implement the TRA measure (publicly available in the link)
 
 </details>
+## _Pretrained Models_
+  The submitted softwate and pretrained models to the [cell tracking challenge](http://celltrackingchallenge.net/) are available at the [Releases](https://github.com/talbenha/cell-tracker-gnn/releases)
 
 ## _Citation_
-If you find either the code or the data useful for your research, cite our paper:
+If you find either the code or the paper useful for your research, cite our paper:
 ```sh
 @inproceedings{benhaim2022gnnct,
 title={Graph Neural Network for Cell Tracking in Microscopy Videos},
