@@ -1,15 +1,13 @@
 <div align="center">
 
-# Graph Neural Network for Cell Tracking in Microscopy Videos
-
-<a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
-<a href="https://pytorchlightning.ai/"><img alt="Lightning" src="https://img.shields.io/badge/-Lightning-792ee5"></a>
-<a href="https://hydra.cc/"><img alt="Config: Hydra" src="https://img.shields.io/badge/Config-Hydra-89b8cd"></a>
-
-
-  Official Implementation: **Graph Neural Network for Cell Tracking in Microscopy Videos**
+# Graph Neural Network for Cell Tracking in Microscopy Videos  
+[![Arxiv](https://img.shields.io/badge/ArXiv-2202.04731-orange.svg?color=red)](https://arxiv.org/abs/2202.04731)
   
-  ![BMP2_gif](https://user-images.githubusercontent.com/57532696/177983056-eb711cb0-16a2-4512-bd23-bddab5025130.gif)
+  Official Implementation: **Graph Neural Network for Cell Tracking in Microscopy Videos** 
+ 
+  <img width="1549" alt="model" src="https://user-images.githubusercontent.com/57532696/177995954-f8d4c6e8-338a-4d2b-a244-e5c9e912dbe9.png">
+
+![BMP2_gif](https://user-images.githubusercontent.com/57532696/177983056-eb711cb0-16a2-4512-bd23-bddab5025130.gif)
 ![control](https://user-images.githubusercontent.com/57532696/177984246-7d7f9c96-c052-4e42-8699-2ce2871da27b.gif)
   
 
@@ -22,16 +20,42 @@
 
 ## Preliminaries
 <details>
-<summary><b> Our implementation integrates the following libraries: </b></summary>
+<summary><b> Our implementation integrates <a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
+<a href="https://pytorchlightning.ai/"><img alt="Lightning" src="https://img.shields.io/badge/-Lightning-792ee5"></a>
+<a href="https://pytorch-geometric.readthedocs.io/en/latest/"><img alt="PyG" src="https://img.shields.io/badge/-PyG-blue"></a>
+<a href="https://hydra.cc/"><img alt="Config: Hydra" src="https://img.shields.io/badge/Config-Hydra-89b8cd"></a> libraries:  </b></summary>
 
 [PyTorch Lightning](https://github.com/PyTorchLightning/pytorch-lightning) is a lightweight PyTorch wrapper for high-performance AI research.
 
+[PyG (PyTorch Geometric)](https://pytorch-geometric.readthedocs.io/en/latest/) is a library built upon PyTorch to easily write and train Graph Neural Networks (GNNs) for a wide range of applications related to structured data.
+
 [Hydra](https://github.com/facebookresearch/hydra) is an open-source Python framework that simplifies the development of research and other complex applications.
 
-> If you are not familiar with [PyTorch](https://pytorch.org), [PyTorch Lightning](https://www.pytorchlightning.ai) and [Hydra](https://hydra.cc). We highly recommend to read about them before starting.
+> If you are not familiar with [PyTorch](https://pytorch.org), [PyTorch Lightning](https://www.pytorchlightning.ai), [PyG](https://pytorch-geometric.readthedocs.io/en/latest/) and [Hydra](https://hydra.cc). We highly recommend to read about them before starting.
 >
 We use older version of the publicly available deep learning template provided in <a href="https://github.com/hobogalaxy/lightning-hydra-template"><img alt="Template" src="https://img.shields.io/badge/-Lightning--Hydra--Template-017F2F?style=flat&logo=github&labelColor=gray"></a>
 
+</details>
+
+
+## Set up conda virtual environment
+<details>
+<summary><b>Install dependencies on linux enviroment (click to expand):</b></summary>
+we provide conda envrioment setup dependencies - if you are not familiar with conda, please read about
+ [Managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) before starting
+
+
+```yaml
+# Enter to the code folder
+cd cell-tracker-gnn
+
+# create conda environment python=3.8 pytorch==1.8.0 torchvision==0.9.0 cudatoolkit=11.1 faiss-gpu pytorch-lightning==1.4.9
+conda create --name cell-tracking-challenge --file requirements-conda.txt
+conda activate cell-tracking-challenge
+
+# install other requirements
+pip install -r requirements.txt
+```
 </details>
 
 ## Structure
@@ -107,10 +131,12 @@ We use older version of the publicly available deep learning template provided i
 ```
 </details>
 
-## Data Structure
+ 
+## Data 
 <details>
-<summary><b> Recommended Data directory should look like (click to expand):</b></summary>
 
+### Data Structure
+Recommended Data directory should look like (click to expand):
 ```
 ├── data                    <- Project data
 │   ├── CTC                 <- Cell tracking challenge data
@@ -145,34 +171,26 @@ We use older version of the publicly available deep learning template provided i
 │   │   │   .
 │   │   │   .
 ```
+
+### Download Datasets
+- **[Cell tracking challenge 2D datasets](http://celltrackingchallenge.net/2d-datasets/)**: 
+- **[Cell tracking challenge 3D datasets](http://celltrackingchallenge.net/3d-datasets/)**: 
 </details>
 
+## Training code
 
-## Set up conda virtual environment
+  
+### Overview
 <details>
-<summary><b>Install dependencies on linux enviroment (click to expand):</b></summary>
-we provide conda envrioment setup dependencies - if you are not familiar with conda, please read about
- [Managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) before starting
-
-
-```yaml
-# Enter to the code folder
-cd cell-tracker-gnn
-
-# create conda environment python=3.8 pytorch==1.8.0 torchvision==0.9.0 cudatoolkit=11.1 faiss-gpu pytorch-lightning==1.4.9
-conda create --name cell-tracking-challenge --file requirements-conda.txt
-conda activate cell-tracking-challenge
-
-# install other requirements
-pip install -r requirements.txt
-```
+  
+Our code consists of 3 run files located on the 'home' directory of the project -```run.py```, ```run_feat_extract.py```, and ```run_train_metric_learning.py```- dividing our project into 3 parts namely 'complete model', 'feature extraction', and 'metric learning', respectively. An overview of each is provided in the next few sentences:
+- **Metric Learning**: is responsible for training a model for extracting features using the Pytorch Metric Learning library and building using a separate source code.(see src_metric_learning in  [#Project Structure](#project-structure)). Before running this part, we should generate CSV files consisting of relevant information about the cells, used by the datasets in metric learning training.
+- **Feature Extraction**: After training a discriminative model to extract features, we are extracting features used later to build our graphs.
+- **Complete Model**: When all the required data is ready, we can use it to train a graph neural network model as presented in the main paper.
+<br>
 </details>
-
-## Download Datasets
-- **Cell tracking challenge 2D datasets**: http://celltrackingchallenge.net/2d-datasets/
-- **Cell tracking challenge 3D datasets**: http://celltrackingchallenge.net/3d-datasets/
-
-## Command lines Summary
+  
+### Command lines Summary
  <details>
 
 We summarize all the relevant command lines to produce a run, an explanation for each variable is provided in **Training code** Section below.
@@ -213,16 +231,7 @@ python run.py datamodule.dataset_params.main_path="./data/ct_features/Fluo-N2DH-
 ```
 </details>
 
-## Overview
-<details>
-Our code consists of 3 run files located on the 'home' directory of the project -```run.py```, ```run_feat_extract.py```, and ```run_train_metric_learning.py```- dividing our project into 3 parts namely 'complete model', 'feature extraction', and 'metric learning', respectively. An overview of each is provided in the next few sentences:
-- **Metric Learning**: is responsible for training a model for extracting features using the Pytorch Metric Learning library and building using a separate source code.(see src_metric_learning in  [#Project Structure](#project-structure)). Before running this part, we should generate CSV files consisting of relevant information about the cells, used by the datasets in metric learning training.
-- **Feature Extraction**: After training a discriminative model to extract features, we are extracting features used later to build our graphs.
-- **Complete Model**: When all the required data is ready, we can use it to train a graph neural network model as presented in the main paper.
-<br>
-</details>
-
-## Training code
+### Dive Into Details
 <details>
 We provide details on how to run any aspect of our code, from metric learning to our full model performing cell tracking, and extracting features in between.
 
@@ -414,3 +423,14 @@ You should create the same script as above with the relevant parameters to train
 Please refer to read about evaluation-methodology of the challenge here http://celltrackingchallenge.net/evaluation-methodology/ - it is also provided with the Command-line software packages that implement the TRA measure (publicly available in the link)
 
 </details>
+
+## _Citation_
+If you find either the code or the data useful for your research, cite our paper:
+```sh
+@inproceedings{benhaim2022gnnct,
+title={Graph Neural Network for Cell Tracking in Microscopy Videos},
+author={Tal Ben-Haim and Tammy Riklin Raviv},
+booktitle={},
+year={2022}
+}
+```
