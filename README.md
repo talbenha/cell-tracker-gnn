@@ -9,14 +9,10 @@
 
 ![BMP2_gif](https://user-images.githubusercontent.com/57532696/177983056-eb711cb0-16a2-4512-bd23-bddab5025130.gif)
 ![control](https://user-images.githubusercontent.com/57532696/177984246-7d7f9c96-c052-4e42-8699-2ce2871da27b.gif)
-  
-
 </div>
 
 </div>
 <br><br>
-
-
 
 ## Preliminaries
 <details>
@@ -41,9 +37,7 @@ We use older version of the publicly available deep learning template provided i
 ## Set up conda virtual environment
 <details>
 <summary><b>Install dependencies on linux enviroment (click to expand):</b></summary>
-we provide conda envrioment setup dependencies - if you are not familiar with conda, please read about
- [Managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) before starting
-
+we provide conda envrioment setup dependencies - if you are not familiar with conda, please read about before starting
 
 ```yaml
 # Enter to the code folder
@@ -424,10 +418,13 @@ You should create the same script as above with the relevant parameters to train
 Please refer to read about evaluation-methodology of the challenge here http://celltrackingchallenge.net/evaluation-methodology/ - it is also provided with the Command-line software packages that implement the TRA measure (publicly available in the link)
 
 </details>
-## _Pretrained Models_
+
+## Collab notebook example
+ ## todo !!!!!!!
+## Pretrained Models
   The submitted softwate and pretrained models to the [cell tracking challenge](http://celltrackingchallenge.net/) are available at the [Releases](https://github.com/talbenha/cell-tracker-gnn/releases)
 
-## _Citation_
+## Citation
 If you find either the code or the paper useful for your research, cite our paper:
 ```sh
 @inproceedings{benhaim2022gnnct,
