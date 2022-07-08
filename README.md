@@ -7,15 +7,13 @@
 <a href="https://hydra.cc/"><img alt="Config: Hydra" src="https://img.shields.io/badge/Config-Hydra-89b8cd"></a>
 
 
-  CONFIDENTIAL REPOSITORY. DO NOT DISTRIBUTE
+  Official Implementation: **Graph Neural Network for Cell Tracking in Microscopy Videos**
 </div>
 
 </div>
 <br><br>
 
 
-## Description
-Official Implementation: **Graph Neural Network for Cell Tracking in Microscopy Videos**
 
 ## Preliminaries
 <details>
@@ -30,7 +28,6 @@ Official Implementation: **Graph Neural Network for Cell Tracking in Microscopy 
 We use older version of the publicly available deep learning template provided in <a href="https://github.com/hobogalaxy/lightning-hydra-template"><img alt="Template" src="https://img.shields.io/badge/-Lightning--Hydra--Template-017F2F?style=flat&logo=github&labelColor=gray"></a>
 
 </details>
-<br>
 
 ## Structure
 <details>
@@ -104,7 +101,6 @@ We use older version of the publicly available deep learning template provided i
 └── run_train_metric_learning.py       <- Run training of any settings using 'configs/metric_learning/...' configuration files
 ```
 </details>
-<br>
 
 ## Data Structure
 <details>
@@ -145,7 +141,6 @@ We use older version of the publicly available deep learning template provided i
 │   │   │   .
 ```
 </details>
-<br>
 
 
 ## Set up conda virtual environment
