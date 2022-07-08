@@ -388,6 +388,7 @@ By default, logs have the following structure separated for two main directories
 
 ## Evaluation code
 <details>
+ 
 To run evaluation, we provide an example script (submitted to CTC) and all the relevant files to run our code in ```src/inference``` folder, details below:
 ```
 SEQUENCE="01"
