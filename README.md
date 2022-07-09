@@ -6,9 +6,11 @@
   Official Implementation: **Graph Neural Network for Cell Tracking in Microscopy Videos** 
  
   <img width="1549" alt="model" src="https://user-images.githubusercontent.com/57532696/177995954-f8d4c6e8-338a-4d2b-a244-e5c9e912dbe9.png">
+  
+![bmp2_control_concat1](https://user-images.githubusercontent.com/57532696/178099404-3af32932-e723-4ec6-a0fc-a30d3f38f67a.gif)
 
-![BMP2_gif](https://user-images.githubusercontent.com/57532696/177983056-eb711cb0-16a2-4512-bd23-bddab5025130.gif)
-![control](https://user-images.githubusercontent.com/57532696/177984246-7d7f9c96-c052-4e42-8699-2ce2871da27b.gif)
+
+
 </div>
 
 </div>
