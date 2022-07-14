@@ -1,6 +1,6 @@
 <div align="center">
 
-# Graph Neural Network for Cell Tracking in Microscopy Videos  
+# Graph Neural Network for Cell Tracking in Microscopy Videos (ECCV 2022)
 [![Arxiv](https://img.shields.io/badge/ArXiv-2202.04731-orange.svg?color=red)](https://arxiv.org/abs/2202.04731)
   
   Official Implementation: **Graph Neural Network for Cell Tracking in Microscopy Videos** 
