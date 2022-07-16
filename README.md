@@ -115,7 +115,7 @@ pip install -r requirements.txt
 │   │   │   ├── resnet.py             <- Final models
 │   └── └── └── utils_resnet.py       <- Multiple ResNet blocks and models Implemetation
 │
-├── LICENSE                 <-ECCV 2022 Submission #5297. CONFIDENTIAL REVIEW COPY. DO NOT DISTRIBUTE
+├── LICENSE                 <- Attribution-NonCommercial 4.0 International
 ├── README.md               <- All information
 │
 ├── requirements.txt              <- File for installing python dependencies (specification of dependencies)
@@ -429,10 +429,10 @@ Please refer to read about evaluation-methodology of the challenge here http://c
 ## Citation
 If you find either the code or the paper useful for your research, cite our paper:
 ```sh
-@inproceedings{benhaim2022gnnct,
+@inproceedings{ben2022graph,
 title={Graph Neural Network for Cell Tracking in Microscopy Videos},
-author={Tal Ben-Haim and Tammy Riklin Raviv},
-booktitle={},
-year={2022}
+author={Ben-Haim, Tal and Riklin-Raviv, Tammy},
+booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+year={2022},
 }
 ```
