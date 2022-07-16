@@ -225,8 +225,8 @@ class TestDataset(Dataset):
             full_dir = op.join(full_dir, "csv")
             os.makedirs(to_absolute_path(full_dir), exist_ok=True)
             file_path = op.join(full_dir, f"frame_{im_num}.csv")
-            print(f"save file to : {file_path}")
             df.to_csv(to_absolute_path(file_path), index=False)
+        print(f"files were saved to : {file_path}")
 
     def preprocess_features_metric_learning(self, path_to_write, dict_path):
         dict_params = torch.load(dict_path)
