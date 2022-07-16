@@ -494,13 +494,6 @@ class Postprocess(object):
         self.save_txt(self.file_str, self.save_tra_dir, 'res_track.txt')
 
 
-def my_imshow(img, title_str, cmap='gray'):
-    plt.figure()
-    plt.imshow(img, cmap=cmap)
-    plt.colorbar()
-    plt.title(title_str)
-    plt.show()
-
 
 if __name__== "__main__":
     import argparse
