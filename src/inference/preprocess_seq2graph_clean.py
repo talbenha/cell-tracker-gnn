@@ -124,7 +124,6 @@ class TestDataset(Dataset):
 
             img, result, im_path, result_path = self[ind_data]
             res_save = result.copy()
-            print(f"start: {result_path}")
             labels_mask = result.copy()
             while True:
                 bin_mask = labels_mask > 0
@@ -332,8 +331,8 @@ class TestDataset(Dataset):
             full_dir = op.join(path_to_write, "csv")
             os.makedirs(full_dir, exist_ok=True)
             file_path = op.join(full_dir, f"frame_{im_num}.csv")
-            print(f"save file to : {file_path}")
             df.to_csv(file_path, index=False)
+        print(f"files were saved to : {full_dir}")
 
 
 def create_csv(input_images, input_seg, input_model, output_csv, min_cell_size):
