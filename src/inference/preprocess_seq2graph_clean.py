@@ -308,7 +308,7 @@ class TestDataset(Dataset):
                 df.loc[row_ind, cols_resnet] = embedded_feat
                 df.loc[row_ind, "seg_label"] = id_res
 
-                df.loc[row_ind, "area"], df.loc[row_ind, "bbox_area"] = properties.area, properties.bbox_area
+                df.loc[row_ind, "area"] = properties.area
 
                 df.loc[row_ind, "min_row_bb"], df.loc[row_ind, "min_col_bb"], \
                 df.loc[row_ind, "max_row_bb"], df.loc[row_ind, "max_col_bb"] = properties.bbox
@@ -323,15 +323,6 @@ class TestDataset(Dataset):
                 df.loc[row_ind, "max_intensity"], df.loc[row_ind, "mean_intensity"], df.loc[row_ind, "min_intensity"] = \
                     properties.max_intensity, properties.mean_intensity, properties.min_intensity
 
-                df.loc[row_ind, "orientation"], df.loc[row_ind, "perimeter"] = properties.orientation, \
-                                                                               properties.perimeter
-                if properties.weighted_centroid[0] != properties.weighted_centroid[0] or properties.weighted_centroid[
-                    1] != properties.weighted_centroid[1]:
-                    df.loc[row_ind, "weighted_centroid_row"], df.loc[
-                        row_ind, "weighted_centroid_col"] = properties.centroid
-                else:
-                    df.loc[row_ind, "weighted_centroid_row"], df.loc[
-                        row_ind, "weighted_centroid_col"] = properties.weighted_centroid
 
             df.loc[:, "frame_num"] = int(im_num)
 
