@@ -432,7 +432,6 @@ class CellTrackDataset(InMemoryDataset):
 
             if is_first_time:
                 is_first_time = False
-                print(f"features: {dropped_df.columns}")
                 if self.normalize_all_cols:
                     self.normalize_cols = np.ones((dropped_df.shape[-1]), dtype=bool)
                 else:
@@ -468,7 +467,6 @@ class CellTrackDataset(InMemoryDataset):
                 edge_feat = torch.FloatTensor(edge_feat)
                 data = Data(x=x, x_2=x_2, edge_index=edge_index, edge_label=edge_label, edge_feat=edge_feat)
 
-            print(f"Finish frame index {ind}")
             data_list.append(data)
         print(f"Num of produced graphs is {len(data_list)}")
 
