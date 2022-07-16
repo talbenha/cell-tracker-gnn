@@ -422,7 +422,7 @@ Please refer to read about evaluation-methodology of the challenge here http://c
 </details>
 
 ## Google Collab notebook example
- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/talbenha/cell-tracker-gnn/blob/main/training_example.ipynb)
+ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/talbenha/cell-tracker-gnn/blob/main/notebooks/training_example.ipynb)
 ## Pretrained Models
   The submitted softwate and pretrained models to the [cell tracking challenge](http://celltrackingchallenge.net/) are available at the [Releases](https://github.com/talbenha/cell-tracker-gnn/releases)
 
