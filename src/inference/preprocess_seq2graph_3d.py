@@ -323,13 +323,12 @@ class TestDataset(Dataset):
 
         cols = ["seg_label",
                 "frame_num",
-                "area", "bbox_area",
+                "area",
                 "min_depth_bb", "min_row_bb", "min_col_bb",
                 "max_depth_bb", "max_row_bb", "max_col_bb",
                 "centroid_depth", "centroid_row", "centroid_col",
                 "major_axis_length", "minor_axis_length",
-                "max_intensity", "mean_intensity", "min_intensity",
-                "weighted_centroid_row", "weighted_centroid_col", "weighted_centroid_depth"
+                "max_intensity", "mean_intensity", "min_intensity"
                 ]
 
         cols_resnet = [f'feat_{i}' for i in range(mlp_dims[-1])]
@@ -360,7 +359,7 @@ class TestDataset(Dataset):
                 df.loc[row_ind, cols_resnet] = embedded_feat
                 df.loc[row_ind, "seg_label"] = id_res
 
-                df.loc[row_ind, "area"], df.loc[row_ind, "bbox_area"] = properties.area, properties.bbox_area
+                df.loc[row_ind, "area"] = properties.area
 
                 df.loc[row_ind, "min_depth_bb"], df.loc[row_ind, "min_row_bb"], \
                 df.loc[row_ind, "min_col_bb"], df.loc[row_ind, "max_depth_bb"], \
@@ -376,16 +375,6 @@ class TestDataset(Dataset):
 
                 df.loc[row_ind, "max_intensity"], df.loc[row_ind, "mean_intensity"], df.loc[row_ind, "min_intensity"] = \
                     properties.max_intensity, properties.mean_intensity, properties.min_intensity
-
-                if properties.weighted_centroid[0] != properties.weighted_centroid[0] or properties.weighted_centroid[
-                    1] != properties.weighted_centroid[1]:
-                    df.loc[row_ind, "weighted_centroid_depth"], \
-                    df.loc[row_ind, "weighted_centroid_row"], \
-                    df.loc[row_ind, "weighted_centroid_col"] = properties.centroid
-                else:
-                    df.loc[row_ind, "weighted_centroid_depth"], \
-                    df.loc[row_ind, "weighted_centroid_row"], \
-                    df.loc[row_ind, "weighted_centroid_col"] = properties.weighted_centroid
 
             df.loc[:, "frame_num"] = int(im_num)
 
