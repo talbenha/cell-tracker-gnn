@@ -274,13 +274,10 @@ class TestDataset(Dataset):
         cols = ["seg_label",
                 "frame_num",
                 "area",
-                "bbox_area",
                 "min_row_bb", "min_col_bb", "max_row_bb", "max_col_bb",
                 "centroid_row", "centroid_col",
                 "major_axis_length", "minor_axis_length",
-                "max_intensity", "mean_intensity", "min_intensity",
-                "orientation", "perimeter",
-                "weighted_centroid_row", "weighted_centroid_col"
+                "max_intensity", "mean_intensity", "min_intensity"
                 ]
 
 
