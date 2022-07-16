@@ -364,7 +364,6 @@ class Postprocess(object):
         idx_str = "%03d" % idx
         file_name = f"mask{idx_str}.tif"
         full_dir = osp.join(self.save_tra_dir, file_name)
-        print(f"Saving file: {full_dir}")
         io.imsave(full_dir, new_pred.astype(np.uint16))
 
     def check_ids_consistent(self, frame_ind, pred_ids, curr_ids):
