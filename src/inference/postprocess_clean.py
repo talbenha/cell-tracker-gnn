@@ -4,7 +4,6 @@ import torch
 import pandas as pd
 import numpy as np
 from skimage import io
-import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings("ignore")
 import imageio
