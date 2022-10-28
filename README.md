@@ -7,7 +7,7 @@
 
   Official Implementation: **Graph Neural Network for Cell Tracking in Microscopy Videos** 
   
- [Project Page](https://talbenha.github.io/cell-tracker-gnn/)
+ [**Project Page**](https://talbenha.github.io/cell-tracker-gnn/)
  
   <img width="1549" alt="model" src="https://user-images.githubusercontent.com/57532696/177995954-f8d4c6e8-338a-4d2b-a244-e5c9e912dbe9.png">
   
