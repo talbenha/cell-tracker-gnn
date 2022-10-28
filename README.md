@@ -1,11 +1,13 @@
 <div align="center">
 
-# Graph Neural Network for Cell Tracking in Microscopy Videos ([ECCV 2022](https://www.springerprofessional.de/graph-neural-network-for-cell-tracking-in-microscopy-videos/23632850))
+# Graph Neural Network for Cell Tracking in Microscopy Videos 
+
+([ECCV 2022](https://www.springerprofessional.de/graph-neural-network-for-cell-tracking-in-microscopy-videos/23632850))
 [![Arxiv](https://img.shields.io/badge/ArXiv-2202.04731-orange.svg?color=red)](https://arxiv.org/abs/2202.04731)
 
   Official Implementation: **Graph Neural Network for Cell Tracking in Microscopy Videos** 
   
-  Please visit our [project page](https://talbenha.github.io/cell-tracker-gnn/)
+ [Project Page](https://talbenha.github.io/cell-tracker-gnn/)
  
   <img width="1549" alt="model" src="https://user-images.githubusercontent.com/57532696/177995954-f8d4c6e8-338a-4d2b-a244-e5c9e912dbe9.png">
   
